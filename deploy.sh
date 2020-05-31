@@ -6,12 +6,14 @@ git submodule update
 ## 1ED
 pushd labdeemergencia1ed
 git pull origin master
+mkdir .jekyll-cache
 jekyll build --destination _site/1ed
 popd
 
 ## 2ED
 pushd labdeemergencia2ed
 git pull origin master
+mkdir .jekyll-cache
 jekyll build --destination _site/2ed
 popd
 
