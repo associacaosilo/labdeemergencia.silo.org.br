@@ -30,7 +30,7 @@ rm -rf labdeemergencia1ed labdeemergencia2ed
 git checkout --orphan gh-pages
 
 git rm --cached -r .
-git add CNAME index.html js
+git add CNAME index.html js imgs
 git add 1ed
 git add 2ed
 git commit -m "updates sites"
