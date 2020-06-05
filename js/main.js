@@ -1,1 +1,1 @@
-window.location.replace("./1ed/");
+window.location.replace("./2ed/");
