@@ -4,3 +4,6 @@
 [submodule "labdeemergencia2ed"]
 	path = labdeemergencia2ed
 	url = https://github.com/associacaosilo/labdeemergencia2ed.git
+[submodule "labdeemergencia3ed"]
+	path = labdeemergencia3ed
+	url = https://github.com/associacaosilo/labdeemergencia3ed.git

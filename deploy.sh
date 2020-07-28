@@ -17,8 +17,15 @@ mkdir .jekyll-cache _site
 jekyll build --destination _site/2ed
 popd
 
+## 3ED
+pushd labdeemergencia3ed
+git pull origin master
+mkdir .jekyll-cache _site
+jekyll build --destination _site/3ed
+popd
+
 ## update submodules
-git add labdeemergencia1ed labdeemergencia2ed
+git add labdeemergencia1ed labdeemergencia2ed labdeemergencia3ed
 git commit -m "update submodules to their latest commit"
 git push origin master
 git checkout -- .
@@ -26,13 +33,15 @@ git checkout -- .
 ## create new branch and push
 mv labdeemergencia1ed/_site/1ed .
 mv labdeemergencia2ed/_site/2ed .
-rm -rf labdeemergencia1ed labdeemergencia2ed
+mv labdeemergencia3ed/_site/3ed .
+rm -rf labdeemergencia1ed labdeemergencia2ed labdeemergencia3ed
 git checkout --orphan gh-pages
 
 git rm --cached -r .
 git add CNAME index.html js imgs
 git add 1ed
 git add 2ed
+git add 3ed
 git commit -m "updates sites"
 git push origin :gh-pages
 git push -u origin gh-pages
