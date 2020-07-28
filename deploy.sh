@@ -24,6 +24,10 @@ mkdir .jekyll-cache _site
 jekyll build --destination _site/3ed
 popd
 
+## root
+mkdir .jekyll-cache _site
+jekyll build --destination _site
+
 ## update submodules
 git add labdeemergencia1ed labdeemergencia2ed labdeemergencia3ed
 git commit -m "update submodules to their latest commit"
@@ -34,11 +38,13 @@ git checkout -- .
 mv labdeemergencia1ed/_site/1ed .
 mv labdeemergencia2ed/_site/2ed .
 mv labdeemergencia3ed/_site/3ed .
-rm -rf labdeemergencia1ed labdeemergencia2ed labdeemergencia3ed
+rm -rf css js media
+mv _site/* .
+rm -rf labdeemergencia1ed labdeemergencia2ed labdeemergencia3ed _site
 git checkout --orphan gh-pages
 
 git rm --cached -r .
-git add CNAME index.html js media
+git add CNAME .nojekyll index.html 404.html js media css
 git add 1ed
 git add 2ed
 git add 3ed

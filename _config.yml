@@ -7,7 +7,7 @@ url: https://labdeemergencia.silo.org.br
 baseurl: ''
 silo_url: https://silo.org.br
 include: ['_pages']
-exclude: ['labdeemergencia1ed', 'labdeemergencia2ed', 'labdeemergencia3ed']
+exclude: ['labdeemergencia1ed', 'labdeemergencia2ed', 'labdeemergencia3ed', 'CNAME', 'deploy.sh']
 
 # Build settings
 markdown: kramdown
