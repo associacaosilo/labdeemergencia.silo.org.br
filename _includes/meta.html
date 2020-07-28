@@ -1,0 +1,31 @@
+{% if page.subtitle %}
+  {% assign subtitle = page.subtitle %}
+{% else %}
+  {% assign subtitle = page.content | strip_html | truncatewords: 16 %}
+{% endif %}
+
+<meta name="description" content="{{ site.title }} - {{ subtitle }}">
+<meta name="keywords" content="art, arte, latitude, rural, laboratorio, ciencia">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="{{ site.twitter_user }}">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ site.subtitle }}">
+<meta name="twitter:creator" content="{{ site.twitter_user }}">
+
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:description" content="{{ site.subtitle }}">
+<meta property="article:publisher" content="{{ site.social.facebook }}">
+
+{% assign basepath = site.url | append: site.baseurl %}
+{% if page.cover %}
+  {% assign coverImagePath = basepath | append: "/" | append: page.cover %}
+{% else %}
+  {% assign coverImagePath = basepath | append: "/media/images/covers/lab-cover.png" %}
+{% endif %}
+
+<meta name="twitter:image" content="{{ coverImagePath }}">
+<meta property="og:image" content="{{ coverImagePath }}">

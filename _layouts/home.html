@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+    {% include meta.html %}
+  </head>
+  <body>
+    {% include menu.html %}
+    <div class="main-div home-main-div">
+      <section class="title-sticky title-section">
+        <a href="{{ site.baseurl }}/{{ PAGE_LANGUAGE }}">
+          <div class="title-image"></div>
+        </a>
+      </section>
+
+      <section class="content-text">
+        {{ content }}
+      </section>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

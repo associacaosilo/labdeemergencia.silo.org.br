@@ -1,0 +1,51 @@
+$FONT-MENU: 'Font1', 'Arial';
+$FONT-TITLE: 'Font3', 'Arial';
+$FONT-TEXT: 'Open Sans', sans-serif;
+
+$MENU-ITEM-SIZE: 0.8rem;
+
+$TITLE-SIZE: 1.6rem;
+$TEXT-SIZE: 0.9rem;
+$LINK-SIZE: 1.3rem;
+
+$TITLE-SIZE-MOBILE: 1.4rem;
+$TEXT-SIZE-MOBILE: 0.8rem;
+$LINK-SIZE-MOBILE: 1rem;
+
+$BACKGROUND-COLOR: rgba(255,255,255,1);
+
+$SITE-ACCENT-COLOR: #ADD100;
+$SITE-ACCENT-COLOR-HOVER: $SITE-ACCENT-COLOR;
+$SITE-ACCENT-COLOR-GRADIENT-0: rgba($SITE-ACCENT-COLOR, .33);
+$SITE-ACCENT-COLOR-GRADIENT-1: rgba($SITE-ACCENT-COLOR, .66);
+
+$TEXT-COLOR: rgba(0,0,0,1);
+
+$LINK-COLOR: $TEXT-COLOR;
+$LINK-COLOR-VISITED: $LINK-COLOR;
+$LINK-COLOR-HOVER: $SITE-ACCENT-COLOR-HOVER;
+
+$MENU-BACKGROUND-COLOR: $SITE-ACCENT-COLOR;
+$MENU-TEXT-COLOR: rgba(255,255,255,1);
+$MENU-TEXT-COLOR-HOVER: darken($MENU-TEXT-COLOR, 25%);
+
+$DESKTOP-WIDTH-SITE: 1280px;
+$COLUMN-WIDTH: $DESKTOP-WIDTH-SITE/4;
+
+$TRANSITION-PERIOD: 0.1s;
+$RESPONSIVE-SPACING: 2vw;
+$MENU-ITEM-SPACING: 4px;
+$MENU-HEIGHT: 35px;
+$MENU-MOBILE-HEIGHT: 160px;
+
+$two_columns: 2 * $COLUMN-WIDTH;
+$three_columns: 3 * $COLUMN-WIDTH;
+
+@mixin media-query($canvas) {
+  @if $canvas == DESKTOP {
+   @media only screen and (min-width: $two_columns) { @content; }
+  }
+  @else if $canvas == LGDESKTOP {
+   @media only screen and (min-width: $three_columns) { @content; }
+  }
+}

@@ -1,0 +1,37 @@
+# Site
+title: 'LABORATÓRIO DE EMERGÊNCIA | COVID 19'
+subtitle: 'RECONFIGURANDO O FUTURO'
+
+# URL
+url: https://labdeemergencia.silo.org.br
+baseurl: ''
+silo_url: https://silo.org.br
+include: ['_pages']
+exclude: ['labdeemergencia1ed', 'labdeemergencia2ed', 'labdeemergencia3ed']
+
+# Build settings
+markdown: kramdown
+port: 7071
+future: false
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "home"
+
+# Data
+social:
+  facebook: "https://www.facebook.com/silo.arte.latitude.rural"
+  instagram: "https://www.instagram.com/silo.arte.e.latitude.rural"
+  github: "https://github.com/associacaosilo"
+  twitter: "https://twitter.com/SiloLatitude"
+  youtube: ""
+  vimeo: ""
+  soundcloud: ""
+  tumblr: ""
+  pinterest: ""
+  envelope-o: "mailto:labdeemergencia@silo.org.br"
+twitter_user: "SiloLatitude"

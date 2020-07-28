@@ -1,0 +1,21 @@
+<div class="footer">
+  <div class="footer-line">
+    Laboratório de Emergência | COVID 19
+  </div>
+  <a class="footer-line" href="{{ site.social['envelope-o'] }}" target="_blank">
+    {{ site.social['envelope-o'] | replace:'mailto:','' }}
+  </a>
+</div>
+
+{% if page.layout == 'home' %}
+  <div class="footer">
+    <div class="footer-line">
+      Uma iniciativa de:
+    </div>
+    <div class="footer-line footer-line-parcerias">
+      <a href="https://silo.org.br" target="_blank">
+        <div class="footer-line parceira-logo" style="background-image: url('{{ site.baseurl }}/media/images/logos/silo.png');"></div>
+      </a>
+    </div>
+  </div>
+{% endif %}
