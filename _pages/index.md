@@ -12,5 +12,4 @@ Conheça as duas primeiras edições do Lab de Emergência:
 [![](/media/images/covers/lab_emergencia_2ed.jpg)](https://labdeemergencia.silo.org.br/2ed){:target="_blank"}
 
 
-Conehça outros laboratórios que realizamos aqui: [[ [LABORATÓRIOS DA SILO](https://silo.org.br/interactivos/){:target="_blank"} ]].
-
+Conehça outros laboratórios realizados pela Silo: [[ [LABORATÓRIOS](https://silo.org.br/interactivos/){:target="_blank"} ]].
