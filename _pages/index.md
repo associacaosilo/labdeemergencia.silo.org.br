@@ -4,7 +4,7 @@ title: Laboratório de Emergência | COVID 19
 permalink: /
 ---
 
-Está aberta a convocatória para projetos para a 3ª edição do Laboratório de Emergência!
+Está aberta a convocatória para colaboradoras/es para a 3ª edição do Laboratório de Emergência!
 
 [![](/media/images/covers/lab_emergencia_3ed.jpg)](https://labdeemergencia.silo.org.br/3ed){:target="_blank"}
 
