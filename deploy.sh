@@ -48,7 +48,7 @@ git add CNAME .nojekyll index.html 404.html js media css
 git add 1ed
 git add 2ed
 git add 3ed
-git commit -m "updates sites"
+git commit -m "updates all sites"
 git push origin :gh-pages
 git push -u origin gh-pages
 
