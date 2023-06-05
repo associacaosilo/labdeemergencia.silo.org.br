@@ -4,7 +4,7 @@ title: Laboratório de Emergência | COVID 19
 permalink: /
 ---
 
-O Laboratório de Emergência é uma proposta colaborativa que trabalha o desenvolvimento de projetos sob a lógica participativa usando de licenças livres que permitam replicação e adaptação dos projetos a outros contextos. 
+ooooO Laboratório de Emergência é uma proposta colaborativa que trabalha o desenvolvimento de projetos sob a lógica participativa usando de licenças livres que permitam replicação e adaptação dos projetos a outros contextos.
 
 Conheça todas edições do Lab de Emergência:
 
