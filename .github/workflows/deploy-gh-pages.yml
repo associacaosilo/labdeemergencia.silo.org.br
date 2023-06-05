@@ -45,7 +45,8 @@ jobs:
 
       - name: Bundle
         run: |
-          mv ./_site ./public
+          mkdir ./public
+          cp -r ./_site/* ./public/
           cp -r CNAME .nojekyll ./public/
           cp -r 1ed 2ed 3ed ./public/
           find ./public -name .git | xargs rm -rf
