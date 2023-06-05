@@ -1,0 +1,58 @@
+name: deploy gh-pages
+
+on:
+  repository_dispatch:
+    types:
+      - build-site
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: '.'
+          destination: './_site'
+
+      - name: Checkout 1ed
+        uses: actions/checkout@v3
+        with:
+          repository: 'associacaosilo/labdeemergencia1ed'
+          ref: 'gh-pages'
+          path: '1ed'
+
+      - name: Checkout 2ed
+        uses: actions/checkout@v3
+        with:
+          repository: 'associacaosilo/labdeemergencia2ed'
+          ref: 'gh-pages'
+          path: '2ed'
+
+      - name: Checkout 3ed
+        uses: actions/checkout@v3
+        with:
+          repository: 'associacaosilo/labdeemergencia3ed'
+          ref: 'gh-pages'
+          path: '3ed'
+
+      - name: Bundle
+        run: |
+          mv ./_site ./public
+          cp -r CNAME .nojekyll ./public/
+          cp -r 1ed 2ed 3ed ./public/
+          find ./public -name .git | xargs rm -rf
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
