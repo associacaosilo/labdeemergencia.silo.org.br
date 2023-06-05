@@ -13,6 +13,7 @@ exclude: ['labdeemergencia1ed', 'labdeemergencia2ed', 'labdeemergencia3ed', 'CNA
 markdown: kramdown
 port: 7071
 future: false
+theme: null
 
 # Defaults
 defaults:
