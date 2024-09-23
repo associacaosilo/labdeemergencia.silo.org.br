@@ -1,39 +1,48 @@
-<div class="menu-section">
-  <ul>
-      <li><a href="{{ site.silo_url }}/sobre/" target="_blank">
-        sobre
-      </a></li>
-      <li><a href="{{ site.silo_url }}/quem-somos/" target="_blank">
-        quem somos
-      </a></li>
-      <li><a href="{{ site.silo_url }}/noticias/" target="_blank">
-        notícias
-      </a></li>
-  </ul>
-</div>
-<div class="menu-section">
-  <ul>
-      <li><a href="{{ site.silo_url }}/caipiratechlab/" target="_blank">
-        caipiraTech
-      </a></li>
-      <li><a href="{{ site.silo_url }}/encontrada/" target="_blank">
-        encontrada
-      </a></li>
-      <li><a href="{{ site.silo_url }}/interactivos/" target="_blank">
-        interactivos?
-      </a></li>
-      <li><a href="{{ site.silo_url }}/residencia/" target="_blank">
-        residência
-      </a></li>
-  </ul>
-</div>
+<!-- Atualizado em 21/08/2024, com os links do site da Silo -->
 
+{% assign silo_url = '' %}
+{% if site.repository != 'associacaosilo/silo.org.br' %}
+  {% assign silo_url = 'https://silo.org.br' %}
+{% endif %}
+  
 <div class="menu-section">
-  {% for social in site.social %}
-    {% unless social[1] == "" %}
-      <a class="menu-item" href="{{ social[1] }}" target="_blank">
-        <i class="fa fa-{{ social[0] }} fa-1_5x" aria-hidden="true"></i>
-      </a>
-    {% endunless %}
-  {% endfor %}
+  <ul>
+    {% case PAGE_LANGUAGE %}
+      {% when 'en' %}
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/about/">about</a></li>
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/who-we-are/">who we are</a></li>
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/news/">news</a></li>
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/donate/">donate</a></li>
+      {% else %}
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/sobre/">sobre</a></li>
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/quem-somos/">quem somos</a></li>
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/noticias/">notícias</a></li>
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/biblioteca/">biblioteca</a></li>
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/transparencia/">Transparência</a></li>
+    {% endcase %}
+  </ul>
+</div>
+<div class="menu-section">
+  <ul>
+    {% case PAGE_LANGUAGE %}
+      {% when 'en' %}
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/en/caipiratechlab/">caipiraTech lab</a></li>
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/en/encontrada/">encontrada</a></li>
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/en/residencia/">residency</a></li>
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/en/labs/">labs</a></li>
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/siloescola/">silo escola</a></li>
+      {% else %}
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/caipiratechlab/">caipiraTech lab</a></li>
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/encontrada/">encontrada</a></li>
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/residencia/">residência</a></li>
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/labs/">laboratórios</a></li>
+        <li><a href="{{ silo_url }}{{ site.baseurl }}/siloescola/">silo escola</a></li>
+    {% endcase %}
+  </ul>
+</div>
+<div class="menu-section">
+  {% include social-icons.html %}
+  <!-- {% if page.lang}
+    {% include language-selection.html %}
+  {% endif %} -->
 </div>
